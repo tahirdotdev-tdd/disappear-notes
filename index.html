@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disappear Notes</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23b8cce0'/%3E%3Cstop offset='100%25' stop-color='%23d4b8d0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='16' height='16' rx='3' fill='url(%23g)'/%3E%3Crect x='3' y='5' width='10' height='1.2' rx='0.6' fill='white' opacity='0.9'/%3E%3Crect x='3' y='8' width='7' height='1.2' rx='0.6' fill='white' opacity='0.6'/%3E%3Crect x='3' y='11' width='4' height='1.2' rx='0.6' fill='white' opacity='0.2'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <main>
+    <header>
+      <span class="wordmark">disappear notes</span>
+      <span class="tagline">words written here are meant to leave</span>
+    </header>
+
+    <div class="editor-wrap">
+      <textarea
+        id="note"
+        placeholder="Begin writing. In 10 seconds of silence, it fades away…"
+        autofocus
+        spellcheck="false"
+      ></textarea>
+      <div class="mist" id="mist"></div>
+    </div>
+
+    <footer>
+      <div class="status-row">
+        <span class="status" id="status">waiting for words</span>
+        <div class="timer-track" id="timer-track">
+          <div class="timer-bar" id="timer-bar"></div>
+        </div>
+      </div>
+      <button class="save-btn" id="save-btn" disabled>
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+          <path d="M2 6.5L5.5 10L11 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        keep this one
+      </button>
+    </footer>
+
+    <div class="saved-list" id="saved-list"></div>
+  </main>
+
+  <div class="toast" id="toast">saved ✦</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
